@@ -11,6 +11,7 @@ const cases  = [
 const predictor = new Predictor();
 
 for (const testCase in cases) {
+  // eslint-disable-next-line no-prototype-builtins
   if (cases.hasOwnProperty(testCase)) {
     const canCirculate = predictor.canCirculate(...cases[testCase]);
 
