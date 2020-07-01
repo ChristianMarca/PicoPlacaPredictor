@@ -1,0 +1,16 @@
+{
+  "WEEKDAY":["MO","TU","WE","TH","FR"],
+  "WEEKEND":["SA","SU"],
+  "TIME_WEEKDAY": {
+    "lowerBoundRestriction": {
+      "start": "07:00",
+      "end": "09:30"
+    },
+    "upperBoundRestriction": {
+      "start": "16:00",
+      "end": "19:30"
+    }
+  },
+  "TIME_WEEKEND": {
+  }
+}
