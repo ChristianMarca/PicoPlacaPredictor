@@ -1,6 +1,7 @@
 # Pico y Placa Predictor
 
 [![Build Status](https://travis-ci.org/ChristianMarca/PicoPlacaPredictor.svg?branch=master)](https://travis-ci.org/ChristianMarca/PicoPlacaPredictor)
+[![codecov](https://codecov.io/gh/ChristianMarca/PicoPlacaPredictor/branch/master/graph/badge.svg)](https://codecov.io/gh/ChristianMarca/PicoPlacaPredictor)
 
 ## Author:
 
