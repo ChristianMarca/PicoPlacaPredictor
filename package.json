@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch *.js",
+    "test-coverage": "jest --collect-coverage",
     "start": "nodemon --exec babel-node index.js",
     "run-example": "./node_modules/.bin/nodemon --exec babel-node ./example.js"
   },
