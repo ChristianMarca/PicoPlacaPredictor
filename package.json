@@ -1,0 +1,45 @@
+{
+  "name": "picoplacapredictor",
+  "version": "0.0.1",
+  "description": "Pico y Placa Predictor",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch *.js",
+    "start": "nodemon --exec babel-node index.js",
+    "run-example": "./node_modules/.bin/nodemon --exec babel-node ./example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianMarca/PicoPlacaPredictor.git"
+  },
+  "author": "ChristianMarca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianMarca/PicoPlacaPredictor/issues"
+  },
+  "homepage": "https://github.com/ChristianMarca/PicoPlacaPredictor#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "^7.3.1",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage/",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "src/constants/",
+      "src/index.js"
+    ]
+  }
+}
