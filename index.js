@@ -8,6 +8,7 @@ console.info('ENTER YOUR PLATE');
 const picoPlacaPredictor = new Predictor();
 
 const question = (q) => {
+  // eslint-disable-next-line no-unused-vars
   return new Promise( (resolve, reject) => {
     inputInterface.question( q, answer => {
       resolve(answer);
