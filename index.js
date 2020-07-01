@@ -18,7 +18,7 @@ const question = (q) => {
 (async function main() {
   let continueExecution;
   while ( continueExecution !== 'n' ) {
-    const data = await question('Plate number, date, time\n');
+    const data = await question('Plate number(AAA-1234), date(2020/12/12), time(12:30)\n');
     const dataConverted = data.split(',').map(item => item.trim());
     const canCirculate = picoPlacaPredictor.canCirculate(...dataConverted);
     

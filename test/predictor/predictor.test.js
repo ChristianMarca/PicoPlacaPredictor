@@ -7,43 +7,43 @@ describe('Validate Plate', () => {
   const predictor = new Predictor(originalPlateNumber);
 
   test('should get weekday (Monday) restriction', () => {
-    return expect(predictor.getCurrentRestriction('MO')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKDAY']);
+    return expect(predictor._getCurrentRestriction('MO')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKDAY']);
   });
 
   test('should get weekday (Friday) restriction', () => {
-    return expect(predictor.getCurrentRestriction('FR')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKDAY']);
+    return expect(predictor._getCurrentRestriction('FR')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKDAY']);
   });
 
   test('should get weekend (sunday) restriction', () => {
-    return expect(predictor.getCurrentRestriction('SU')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKEND']);
+    return expect(predictor._getCurrentRestriction('SU')).toStrictEqual(CALENDAR_CONSTRAINTS['TIME_WEEKEND']);
   });
 
   test('should verify if hour/minute is greater than the restriction in lower bound (true)', () => {
-    return expect(predictor.checkLowerBound(7, 1, 7, 0)).toBeTruthy();
+    return expect(predictor._checkLowerBound(7, 1, 7, 0)).toBeTruthy();
   });
 
   test('should verify if hour/minute is greater than the restriction in lower bound (false)', () => {
-    return expect(predictor.checkLowerBound(7, 1, 7, 2)).toBeFalsy();
+    return expect(predictor._checkLowerBound(7, 1, 7, 2)).toBeFalsy();
   });
 
   test('should verify if hour/minute is equal than the restriction in lower bound (false)', () => {
-    return expect(predictor.checkLowerBound(7, 0, 7, 0)).toBeTruthy();
+    return expect(predictor._checkLowerBound(7, 0, 7, 0)).toBeTruthy();
   });
 
   test('should verify if hour/minute is smaller than the restriction in upper bound (true)', () => {
-    return expect(predictor.checkUpperBound(19, 29, 19, 30)).toBeTruthy();
+    return expect(predictor._checkUpperBound(19, 29, 19, 30)).toBeTruthy();
   });
 
   test('should verify if hour/minute is smaller than the restriction in upper bound (true) 24h', () => {
-    return expect(predictor.checkUpperBound(23, 29, 0, 30)).toBeTruthy();
+    return expect(predictor._checkUpperBound(23, 29, 0, 30)).toBeTruthy();
   });
 
   test('should verify if hour/minute is smaller than the restriction in upper bound (false)', () => {
-    return expect(predictor.checkUpperBound(19, 31, 19, 30)).toBeFalsy();
+    return expect(predictor._checkUpperBound(19, 31, 19, 30)).toBeFalsy();
   });
 
   test('should verify if hour/minute is equal than the restriction in upper bound (false)', () => {
-    return expect(predictor.checkUpperBound(19, 30, 19, 30)).toBeTruthy();
+    return expect(predictor._checkUpperBound(19, 30, 19, 30)).toBeTruthy();
   });
 
   test('should verify if hour/minute is between bound (true)', () => {
